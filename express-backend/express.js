@@ -54,7 +54,3 @@ app.post("/students/register",(req,res)=>{
     res.status(201).json(data);
 
 });
-
-app.listen(PORT, () => {
-    console.log(Server is running on http://localhost:${PORT});
-)});

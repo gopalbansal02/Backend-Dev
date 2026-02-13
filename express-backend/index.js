@@ -20,3 +20,20 @@ app.get("/user/:id",(req,res)=>{
 app.listen(PORT, ()=>{
     console.log(`Server is running on port:${PORT}`)
 })
+
+app.use(express.json())
+
+app.post("/students/register",(req,res)=>{
+    const data =req.body;
+    students.push(data)
+    res.json(students)
+});
+
+// const loggerFile= (req, res , next)=>{
+//     const log ='Request at :${new Date().toLocaleString{}} method: ${req.mehtod};
+//     fs.appendFile("log.txt","utf-8",(err) =>{
+//         if(err){
+//             console.log(err);
+//         }
+//     })
+// }
